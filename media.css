@@ -238,6 +238,10 @@ body {
     line-height: 22.23px;
 }
 
+.login-container {
+    gap: 1.5rem;
+}
+
 .nav__login-btn {
     color: white;
     background: linear-gradient(214.38deg, #007cf0 -2.24%, #0046a6 59.38%);
@@ -252,6 +256,10 @@ body {
 
 .nav__login-btn:hover {
     background: rgba(0, 124, 240, 0.8);
+}
+
+.mobile-menu__wrapper {
+    display: none;
 }
 
 /* main */
@@ -373,4 +381,99 @@ body {
     z-index: 0;
     margin-left: auto;
     margin-right: auto;
+}
+
+@media (max-width: 1249px) {
+    :root {
+        --max-width: 950px;
+    }
+
+    .nav__links {
+        gap: 1rem;
+    }
+
+    .hero-container {
+        grid-template-columns: minmax(auto, 450px) auto;
+        gap: 2.5rem;
+    }
+
+    .hero__title {
+        font-size: 42px;
+    }
+
+    .hero__button {
+        min-width: unset;
+    }
+}
+
+@media (max-width: 999px) {
+    :root {
+        --max-width: 750px;
+    }
+
+    .nav__login-btn {
+        padding: 12px 36px 12px 36px;
+    }
+
+    .nav__right {
+        display: none;
+    }
+
+    .mobile-menu__wrapper {
+        display: flex;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero__image-wrapper {
+        grid-row: 1;
+    }
+
+    .hero__title,
+    .hero__description {
+        text-align: center;
+    }
+
+    .hero__button-container {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 799px) {
+    :root {
+        --max-width: 100%;
+    }
+
+    .max-width-desktop {
+        margin-inline: 2.5rem;
+    }
+
+    .social-bar {
+        flex-direction: column-reverse;
+        gap: 0.75rem;
+    }
+
+    .social-bar__left {
+        gap: 0.75rem;
+    }
+
+    .social-bar__right {
+        gap: 0.875rem;
+    }
+
+    .nav__login-btn {
+        display: none;
+    }
+
+    .hero__image-wrapper {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 550px) {
+    .max-width-desktop {
+        margin-inline: 1.5rem;
+    }
 }
